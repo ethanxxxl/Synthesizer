@@ -32,8 +32,8 @@ int main()
 {
 	const double C=220;
 
-   // set up pipe between the parent and future cLwqqhild process.
-   // fd[1] the parent STDOUT, and fd[0] is the childs STDIN
+	// set up pipe between the parent and future child process.
+	// fd[1] the parent STDOUT, and fd[0] is the childs STDIN
 	int fd[2];
 	pipe(fd);
 
@@ -58,8 +58,7 @@ int main()
 
 		// execute the command
 		int e = execvp(argv[0], argv);
-		int err = errno;
-
+		int err = errno;	
 		// check for errors
 		if (e == -1)
 		{

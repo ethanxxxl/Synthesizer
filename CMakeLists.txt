@@ -13,4 +13,8 @@ set(CMAKE_BUILD_TYPE Debug)
 
 add_executable(run ${SRC})
 
+add_executable(input src/input.c)
+
 target_link_libraries(run m)
+
+target_link_libraries(input ncurses)
